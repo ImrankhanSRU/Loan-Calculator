@@ -1,0 +1,152 @@
+.container {
+    margin-top: 5vh;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    padding: 2vw;
+    height: 100%;
+}
+
+.blur {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+}
+
+.eleWidth {
+    width: 50vw
+}
+
+.months-select {
+    padding: 5px 10px;
+    border: 1px solid #3f51b5;
+    border-radius: 5px;
+    width: 25vw;
+
+}
+
+.text {
+    color: #3f51b5;
+}
+
+.history {
+    border: 1px solid lightblue;
+    display: flex;
+    flex-direction: column;
+    background: lightblue;
+    /* align-items: center; */
+    /* width: 12vw; */
+    max-height: 30vh;
+    margin-top: 30px;
+    overflow: auto;
+    margin-right: 10vw;
+    border-radius: 5px;
+}
+
+.card {
+    border-bottom: 1px solid white;
+    padding: 5px 20px;
+    /* width: 12vw; */
+    cursor: pointer;
+}
+
+.mar-10 {
+    width: 100px;
+}
+
+.card:hover {
+    background: rgb(126, 177, 194)
+}
+
+
+.result-box {
+    padding: 10px;
+    width: 25%;
+    max-height: auto;
+    border: 1px solid lightblue;
+    display: flex;
+    flex-direction: column;
+    background: lightblue;
+    margin-top: 30px;
+    margin-right: 10vw;
+    border-radius: 5px; 
+    align-items: 'flex-start'
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+
+@media(max-width: 800px) {
+    .eleWidth {
+        width: 80vw
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .history {
+        width: 80vw;
+        max-height: 20vh;
+        margin-right: 0;
+    }
+
+    .result-box {
+        border: 1px solid lightblue;
+        display: flex;
+        flex-direction: column;
+        background: lightblue;
+        margin-top: 30px;
+        margin-right: 10vw;
+        border-radius: 5px; 
+        width: 77vw;
+        padding-right: 0; 
+    }
+
+    .months-select {
+        width: 80vw;
+    }
+
+    .flex-box {
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    .loader {
+        top: 40%;
+        left: 45%;
+    }
+}
+
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
