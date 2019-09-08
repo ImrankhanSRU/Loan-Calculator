@@ -68,9 +68,9 @@ export default class LoanAmountCalculator extends Component {
 
     formRecentInputs = () => {
         let recentInputs = JSON.parse(localStorage.getItem('recent-inputs'))
-        recentInputs = recentInputs.reverse()
         let inputs = [];
         if (recentInputs) {
+            recentInputs = recentInputs.reverse()
             recentInputs.map((item, index) => {
                 inputs.push(<tr onClick={() => this.calculateInterest(item.amount, parseInt(item.months))} className="card" key={index}><td className="mar-10">{item.months}months</td><td>${item.amount}</td></tr>)
             })
