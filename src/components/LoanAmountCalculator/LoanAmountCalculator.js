@@ -140,7 +140,7 @@ export default class LoanAmountCalculator extends Component {
                 </div>
                 <table>
                     <tbody className="history">
-                        <tr style={{ position: "fixed", top: '5%' }}>
+                        <tr>
                             <th>Recent inputs</th>
                         </tr>
                         {this.formRecentInputs()}
