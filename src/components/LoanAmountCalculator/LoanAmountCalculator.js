@@ -102,14 +102,7 @@ export default class LoanAmountCalculator extends Component {
                     this.state.loader &&
                     <CircularProgress className="loader" />
                 }
-                <table>
-                    <tbody className="history">
-                        <tr style={{ position: "fixed", top: '5%' }}>
-                            <th>Recent inputs</th>
-                        </tr>
-                        {this.formRecentInputs()}
-                    </tbody>
-                </table>
+
                 <div>
                     <div className="eleWidth">
                         <h4 className="text">Loan Amount</h4>
@@ -120,7 +113,7 @@ export default class LoanAmountCalculator extends Component {
                             max={5000}
                             valueLabelDisplay="auto"
                             marks={marks}
-                            onChange={this.handleAmountChange}
+                            onChangeCommitted={this.handleAmountChange}
                         // getAriaValueText={this.handleChange}
                         />
                     </div>
@@ -139,7 +132,14 @@ export default class LoanAmountCalculator extends Component {
                     </div>
 
                 </div>
-
+                <table>
+                    <tbody className="history">
+                        <tr style={{ position: "fixed", top: '5%' }}>
+                            <th>Recent inputs</th>
+                        </tr>
+                        {this.formRecentInputs()}
+                    </tbody>
+                </table>
             </div>
         );
     }
