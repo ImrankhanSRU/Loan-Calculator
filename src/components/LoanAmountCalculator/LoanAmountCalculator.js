@@ -86,11 +86,17 @@ export default class LoanAmountCalculator extends Component {
             blur = 'blur'
         }
         let marks = [
-            {
-                value: state.amount,
-                label: `$${state.amount}`
-            }
+
         ];
+
+        for (let i = 1; i < 10; i++) {
+            let obj = {value: 500 * i}
+            if (i == 1) {
+                obj = {...obj, label: `$${500 * i}` }
+            }
+            marks.push(obj)
+        }
+
         if (state.amount !== 5000) {
             marks.push({ value: 5000, label: `$5000` })
         }
